@@ -121,8 +121,8 @@ From the project root:
 
 5. Test logins:
 
-   - Admin: `admin@portal.com` / `Admin1234!`
-   - Buyer: `buyer@portal.com` / `Buyer1234!`
+   - Admin: Run this command docker exec -it realstateportal-backend-1 python manage.py createsuperuser
+   - Buyer: This can be created from the UI after registering and verifying the otp.
 
 ---
 
