@@ -2,9 +2,11 @@ frontend/node_modules/
 frontend/dist/
 frontend/.env
 frontend/.env.*
+frontend/.env.example
 
 backend/.env
 backend/.env.*
+backend/.env.example
 backend/__pycache__/
 
 __pycache__/
@@ -19,3 +21,4 @@ __pycache__/
 
 *.env
 .env
+.env.example

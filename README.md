@@ -13,7 +13,6 @@
 - [Backend API Overview](#backend-api-overview)
 - [Project Structure](#project-structure)
 - [Troubleshooting](#troubleshooting)
-- [License](#license)
 
 ---
 
@@ -58,29 +57,6 @@ Browser (localhost)
 - React/Vite on **5173** with HMR.
 - Django on **8000**.
 - Vite dev proxy forwards `/api/*` → Django, no Nginx in dev.
-
-### Production (recommended)
-
-Conceptually (not included in dev compose, but easy to add):
-
-```text
-Internet
-   │  HTTPS :443
-   ▼
-┌─────────────────────────┐
-│        Nginx            │
-│  /        → React build │
-│  /api/    → Gunicorn    │
-└───────────┬─────────────┘
-            │
-   ┌────────▼────────┐
-   │  Gunicorn+DRF   │
-   └────────┬────────┘
-            │
-   ┌────────▼────────┐     ┌──────────────┐
-   │  PostgreSQL     │     │   Redis      │
-   └─────────────────┘     └──────────────┘
-```
 
 ---
 
@@ -306,9 +282,3 @@ RealStatePortal/
 - **Admin cannot access `/admin/...`**: ensure user has `role='admin'` and is created by seed or `createsuperuser`.
 
 ---
-
-## License
-
-This project is licensed under the **MIT License**.
-
-See the [LICENSE](LICENSE) file for full license text.
